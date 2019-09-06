@@ -50,7 +50,7 @@ Also, you can reference the script file via [CDN]() which will add a global comp
       </div>
     </template>
 
-    <template slot="clip-uploader-body" scope="props">
+    <template slot="clip-uploader-body" slot-scope="props">
       <div v-for="file in props.files">
         <img v-bind:src="file.dataUrl" />
         {{ file.name }} {{ file.status }}
@@ -181,7 +181,7 @@ The most common requirement is to know when a user `starts` and `stops` dragging
 <template>
   <vue-clip :options="options">
 
-    <template slot="clip-uploader-action" scope="params">
+    <template slot="clip-uploader-action" slot-scope="params">
       <div v-bind:class="{'is-dragging': params.dragging}" class="upload-action">
         <h2> Click or Drag and Drop files here upload </h2>
       </div>
